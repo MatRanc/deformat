@@ -1,3 +1,7 @@
+:root {
+	color-scheme: light dark;
+}
+
 *,
 *:after,
 *:before {
@@ -66,6 +70,37 @@ textarea {
 	-webkit-box-sizing: border-box;
 	padding: 5px;
 	width: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background: #1e1e1e;
+		color: #ccc;
+	}
+
+	a {
+		color: #4af;
+	}
+
+	a:hover {
+		color: #7bf;
+	}
+
+	button {
+		background: #3a3a3a;
+		color: #ddd;
+	}
+
+	button:hover,
+	code {
+		background: #4a4a4a;
+	}
+
+	textarea {
+		background: #2a2a2a;
+		border-color: #555;
+		color: #ddd;
+	}
 }
 
 #toast-container {
