@@ -21,3 +21,10 @@ function showToast() {
 		toast.style.display = "none";
 	}, 3000);
 }
+
+document.getElementById("theme").addEventListener("click", function () {
+	const root = document.documentElement;
+	const dark = (root.style.colorScheme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")) === "dark";
+	root.style.colorScheme = dark ? "light" : "dark";
+	localStorage.setItem("theme", root.style.colorScheme);
+});
